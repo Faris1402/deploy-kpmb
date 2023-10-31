@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WELCOME TO KPM BERANANG</h1>
+    <strong>COURSE</strong><br><br>
+
+    <table>
+        <tr>
+            <td><strong>CODE</strong></td>
+            <td><strong>DESCRIPTION</strong></td>
+        </tr>
+        {% for data in allcourse %}
+        <tr>
+            <td>{{data.code}}</td>
+            <td>{{data.description}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br><br>
+    <a href = "{% url 'new_course'%}">New Course</a>
+    <a href = "{% url 'index'%}">Home</a>
+</body>
+</html>
